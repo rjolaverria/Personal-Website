@@ -1,26 +1,49 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-const Nav = (props) => {
+const Nav = ({ history }) => {
+  const [current, setCurrent] = useState({
+    home: false,
+    about: false,
+    projects: false,
+    blog: false,
+  });
+
+  const location = window.location.pathname;
+
   useEffect(() => {
-    props.history.listen(() => console.log(window.location.pathname));
-  }, [props.history]);
+    Object.keys(current).forEach((k) => (current[k] = false));
+    switch (location.substring(1)) {
+      case 'about':
+        setCurrent({ ...current, about: true });
+        break;
+      case 'projects':
+        setCurrent({ ...current, projects: true });
+        break;
+      case 'blog':
+        setCurrent({ ...current, blog: true });
+        break;
+      default:
+        setCurrent({ ...current, home: true });
+        break;
+    }
+  }, [location]);
 
   return (
     <Fragment>
       <nav className='side-nav'>
         <div className='nav-items'>
-          <Link to='/' className='active'>
+          <Link to='/' className={current.home ? 'active' : ''}>
             <i className='fas fa-home'></i>
           </Link>
-          <Link to='about'>
-            <i className='fas fa-address-card'></i>
+          <Link to='about' className={current.about ? 'active' : ''}>
+            <i className='far fa-address-card'></i>
           </Link>
-          <Link to='projects'>
-            <i className='fas fa-project-diagram'></i>
+          <Link to='projects' className={current.projects ? 'active' : ''}>
+            <i className='fas fa-code-branch'></i>
           </Link>
-          <Link to='blog'>
-            <i className='fas fa-rss'></i>
+          <Link to='blog' className={current.blog ? 'active' : ''}>
+            <i className='fa fa-newspaper-o' aria-hidden='true'></i>
           </Link>
         </div>
         <div className='nav-items social'>

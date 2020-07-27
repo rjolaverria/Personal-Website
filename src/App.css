@@ -48,6 +48,7 @@ nav.bottom-nav {
 
 .nav-items a {
   color: var(--light-color);
+  display: block;
   font-size: 2rem;
   text-decoration: none;
   padding: 0 0.5rem;
@@ -56,6 +57,10 @@ nav.bottom-nav {
 
 .nav-items a:hover {
   color: white;
+}
+
+.fa-code-branch {
+  padding: 0 0.37rem;
 }
 
 .social-bottom {
