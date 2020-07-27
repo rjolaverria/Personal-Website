@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 const Nav = () => {
   const [current, setCurrent] = useState({
@@ -95,4 +95,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default withRouter(Nav);
