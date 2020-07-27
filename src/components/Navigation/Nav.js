@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Nav = ({ history }) => {
+const Nav = () => {
   const [current, setCurrent] = useState({
     home: false,
     about: false,
@@ -95,4 +95,4 @@ const Nav = ({ history }) => {
   );
 };
 
-export default withRouter(Nav);
+export default Nav;
