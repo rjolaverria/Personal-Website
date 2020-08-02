@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 const Nav = ({ history }) => {
+  // Current page
   const [current, setCurrent] = useState(window.location.pathname);
 
   // Update current page
