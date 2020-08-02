@@ -1,14 +1,9 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import React, { Fragment } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-const Nav = ({ history }) => {
+const Nav = () => {
   // Current page
-  const [current, setCurrent] = useState(window.location.pathname);
-
-  // Update current page
-  useEffect(() => {
-    history.listen(() => setCurrent(window.location.pathname));
-  }, [current, history]);
+  const current = useLocation().pathname;
 
   return (
     <Fragment>
@@ -79,4 +74,4 @@ const Nav = ({ history }) => {
   );
 };
 
-export default withRouter(Nav);
+export default Nav;
