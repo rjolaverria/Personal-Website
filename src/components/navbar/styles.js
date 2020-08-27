@@ -1,0 +1,40 @@
+import styled from 'styled-components';
+
+export const Container = styled.nav`
+    color: var(--light-color);
+    background-color: var(--secondary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1;
+`;
+
+export const Items = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+
+    a {
+        color: var(--light-color);
+        display: block;
+        font-size: 2rem;
+        text-decoration: none;
+        padding: 0 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    a:hover {
+        color: white;
+    }
+`;
+
+export const Social = styled(Items)`
+    @media (max-height: 567px) {
+        display: none;
+    }
+`;
