@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Container, Items, Social } from './styles';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { Container, Items, Social, Link } from './styles';
 
 const Navbar = () => {
     // Current page
@@ -9,43 +9,46 @@ const Navbar = () => {
     return (
         <Container>
             <Items>
-                <Link to='/' className={current === '/' ? 'active' : ''}>
+                <RouterLink to='/' className={current === '/' ? 'active' : ''}>
                     <i className='fas fa-home'></i>
-                </Link>
-                <Link
+                </RouterLink>
+                <RouterLink
                     to='about'
                     className={current === '/about' ? 'active' : ''}
                 >
                     <i className='far fa-address-card'></i>
-                </Link>
-                <Link
+                </RouterLink>
+                <RouterLink
                     to='projects'
                     className={current === '/projects' ? 'active' : ''}
                 >
                     <i className='fas fa-code-branch'></i>
-                </Link>
-                <Link to='blog' className={current === '/blog' ? 'active' : ''}>
+                </RouterLink>
+                <RouterLink
+                    to='blog'
+                    className={current === '/blog' ? 'active' : ''}
+                >
                     <i className='fa fa-newspaper-o' aria-hidden='true'></i>
-                </Link>
+                </RouterLink>
             </Items>
             <Social>
-                <a
+                <Link
                     href='https://www.linkedin.com/in/RafiOlaverria'
                     target='_blank'
                     rel='noopener noreferrer'
                 >
                     <i className='fab fa-linkedin-in'></i>
-                </a>
-                <a
+                </Link>
+                <Link
                     href='https://github.com/rjolaverria'
                     target='_blank'
                     rel='noopener noreferrer'
                 >
                     <i className='fab fa-github-alt'></i>
-                </a>
-                <a href='#resume'>
+                </Link>
+                <Link href='#resume'>
                     <i className='fas fa-file'></i>
-                </a>
+                </Link>
             </Social>
         </Container>
     );

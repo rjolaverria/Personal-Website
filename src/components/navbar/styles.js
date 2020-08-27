@@ -38,3 +38,4 @@ export const Social = styled(Items)`
         display: none;
     }
 `;
+export const Link = styled.a``;
