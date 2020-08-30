@@ -34,9 +34,9 @@ export const Items = styled.div`
     }
 `;
 
-export const Link = styled(RouterLink)`
-    border: 4px solid var(--secondary-color);
-    ${({ active }) => active && `border-left: 4px solid white;`}
+export const Tab = styled(RouterLink)`
+    border-left: 3px solid var(--secondary-color);
+    ${({ active }) => active && `border-left: 3px solid white;`}
     transition: border 1s;
 `;
 

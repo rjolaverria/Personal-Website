@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { Container, Items, Social, Link } from './styles';
+import { Container, Items, Social, Tab } from './styles';
 
 const Navbar = () => {
     // Current page
@@ -9,21 +9,21 @@ const Navbar = () => {
     return (
         <Container>
             <Items>
-                <Link to='/' active={current === '/'}>
+                <Tab to='/' active={current === '/'}>
                     <i className='fas fa-home'></i>
-                </Link>
-                <Link to='about' active={current === '/about'}>
+                </Tab>
+                <Tab to='about' active={current === '/about'}>
                     <i className='far fa-address-card'></i>
-                </Link>
-                <Link to='projects' active={current === '/projects'}>
+                </Tab>
+                <Tab to='projects' active={current === '/projects'}>
                     <i
                         className='fas fa-code-branch'
                         style={{ padding: '0 0.37rem' }}
                     ></i>
-                </Link>
-                <Link to='blog' active={current === '/blog'}>
+                </Tab>
+                <Tab to='blog' active={current === '/blog'}>
                     <i className='fa fa-newspaper-o' aria-hidden='true'></i>
-                </Link>
+                </Tab>
             </Items>
             <Social>
                 <a
