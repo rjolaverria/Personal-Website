@@ -9,19 +9,22 @@ const Navbar = () => {
     return (
         <Container>
             <Items>
-                <Tab to='/' active={current === '/'}>
+                <Tab to='/' active={current === '/' ? 'true' : ''}>
                     <i className='fas fa-home'></i>
                 </Tab>
-                <Tab to='about' active={current === '/about'}>
+                <Tab to='about' active={current === '/about' ? 'true' : ''}>
                     <i className='far fa-address-card'></i>
                 </Tab>
-                <Tab to='projects' active={current === '/projects'}>
+                <Tab
+                    to='projects'
+                    active={current === '/projects' ? 'true' : ''}
+                >
                     <i
                         className='fas fa-code-branch'
                         style={{ padding: '0 0.37rem' }}
                     ></i>
                 </Tab>
-                <Tab to='blog' active={current === '/blog'}>
+                <Tab to='blog' active={current === '/blog' ? 'true' : ''}>
                     <i className='fa fa-newspaper-o' aria-hidden='true'></i>
                 </Tab>
             </Items>
