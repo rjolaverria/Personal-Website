@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Container, Items, Social, Link } from './styles';
 
 const Navbar = () => {
@@ -9,46 +9,40 @@ const Navbar = () => {
     return (
         <Container>
             <Items>
-                <RouterLink to='/' className={current === '/' ? 'active' : ''}>
+                <Link to='/' active={current === '/'}>
                     <i className='fas fa-home'></i>
-                </RouterLink>
-                <RouterLink
-                    to='about'
-                    className={current === '/about' ? 'active' : ''}
-                >
+                </Link>
+                <Link to='about' active={current === '/about'}>
                     <i className='far fa-address-card'></i>
-                </RouterLink>
-                <RouterLink
-                    to='projects'
-                    className={current === '/projects' ? 'active' : ''}
-                >
-                    <i className='fas fa-code-branch'></i>
-                </RouterLink>
-                <RouterLink
-                    to='blog'
-                    className={current === '/blog' ? 'active' : ''}
-                >
+                </Link>
+                <Link to='projects' active={current === '/projects'}>
+                    <i
+                        className='fas fa-code-branch'
+                        style={{ padding: '0 0.37rem' }}
+                    ></i>
+                </Link>
+                <Link to='blog' active={current === '/blog'}>
                     <i className='fa fa-newspaper-o' aria-hidden='true'></i>
-                </RouterLink>
+                </Link>
             </Items>
             <Social>
-                <Link
+                <a
                     href='https://www.linkedin.com/in/RafiOlaverria'
                     target='_blank'
                     rel='noopener noreferrer'
                 >
                     <i className='fab fa-linkedin-in'></i>
-                </Link>
-                <Link
+                </a>
+                <a
                     href='https://github.com/rjolaverria'
                     target='_blank'
                     rel='noopener noreferrer'
                 >
                     <i className='fab fa-github-alt'></i>
-                </Link>
-                <Link href='#resume'>
+                </a>
+                <a href='#resume'>
                     <i className='fas fa-file'></i>
-                </Link>
+                </a>
             </Social>
         </Container>
     );

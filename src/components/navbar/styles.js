@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link as RouterLink } from 'react-router-dom';
 
 export const Container = styled.nav`
     color: var(--light-color);
@@ -33,9 +34,14 @@ export const Items = styled.div`
     }
 `;
 
+export const Link = styled(RouterLink)`
+    border: 4px solid var(--secondary-color);
+    ${({ active }) => active && `border-left: 4px solid white;`}
+    transition: border 1s;
+`;
+
 export const Social = styled(Items)`
     @media (max-height: 567px) {
         display: none;
     }
 `;
-export const Link = styled.a``;
