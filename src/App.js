@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
-
 import { Container } from './components';
 import Navigation from './containers/Navigation';
 
