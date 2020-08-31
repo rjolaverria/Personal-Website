@@ -1,17 +1,21 @@
 import React, { useState, useContext, createContext } from 'react';
-import { Container, Inner, Item, Header, Body } from './styles';
+import { Container, Item, Header, Body } from './styles';
 
-const ToggleContext = createContext();
+const AccordionContext = createContext();
 
 const Accordion = ({ children, ...restProps }) => {
     const [activeIndex, setActiveIndex] = useState(null);
 
     return (
-        <ToggleContext.Provider value={{ activeIndex, setActiveIndex }}>
-            <Container {...restProps}>
-                <Inner>{children}</Inner>
-            </Container>
-        </ToggleContext.Provider>
+        <Container {...restProps}>
+            {children.map((child, index) => (
+                <AccordionContext.Provider
+                    value={{ index, activeIndex, setActiveIndex }}
+                >
+                    {child}
+                </AccordionContext.Provider>
+            ))}
+        </Container>
     );
 };
 
@@ -19,8 +23,8 @@ Accordion.Item = ({ children, ...restProps }) => (
     <Item {...restProps}>{children}</Item>
 );
 
-Accordion.Header = function AccordionHeader({ children, index, ...restProps }) {
-    const { activeIndex, setActiveIndex } = useContext(ToggleContext);
+Accordion.Header = function AccordionHeader({ children, ...restProps }) {
+    const { index, activeIndex, setActiveIndex } = useContext(AccordionContext);
     const handleClick = () => {
         if (activeIndex === index) {
             setActiveIndex(null);
@@ -41,8 +45,8 @@ Accordion.Header = function AccordionHeader({ children, index, ...restProps }) {
     );
 };
 
-Accordion.Body = function AccordionBody({ children, index, ...restProps }) {
-    const { activeIndex } = useContext(ToggleContext);
+Accordion.Body = function AccordionBody({ children, ...restProps }) {
+    const { index, activeIndex } = useContext(AccordionContext);
     const active = activeIndex === index;
     return (
         <Body active={active} {...restProps}>

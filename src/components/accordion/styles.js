@@ -2,10 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
     display: flex;
-`;
-
-export const Inner = styled.div`
-    display: flex;
     flex-direction: column;
     width: 75%;
 `;

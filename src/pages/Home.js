@@ -59,8 +59,8 @@ const Home = () => {
                 <Block.Title>FAQs</Block.Title>
                 <Accordion>
                     <Accordion.Item>
-                        <Accordion.Header index={1}>Header 1</Accordion.Header>
-                        <Accordion.Body index={1}>
+                        <Accordion.Header>Header 1</Accordion.Header>
+                        <Accordion.Body>
                             Lorem ipsum dolor sit, amet consectetur adipisicing
                             elit. Molestiae, earum ipsam obcaecati ratione amet
                             voluptatem sit nihil quam repudiandae illum
@@ -69,8 +69,8 @@ const Home = () => {
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item>
-                        <Accordion.Header index={2}>Header 2</Accordion.Header>
-                        <Accordion.Body index={2}>
+                        <Accordion.Header>Header 2</Accordion.Header>
+                        <Accordion.Body>
                             Lorem ipsum dolor sit, amet consectetur adipisicing
                             elit. Molestiae, earum ipsam obcaecati ratione amet
                             voluptatem sit nihil quam repudiandae illum
@@ -79,8 +79,8 @@ const Home = () => {
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item>
-                        <Accordion.Header index={3}>Header 3</Accordion.Header>
-                        <Accordion.Body index={3}>
+                        <Accordion.Header>Header 3</Accordion.Header>
+                        <Accordion.Body>
                             Lorem ipsum dolor sit, amet consectetur adipisicing
                             elit. Molestiae, earum ipsam obcaecati ratione amet
                             voluptatem sit nihil quam repudiandae illum
