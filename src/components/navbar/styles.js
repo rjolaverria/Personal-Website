@@ -25,8 +25,7 @@ export const Items = styled.div`
         display: block;
         font-size: 2rem;
         text-decoration: none;
-        padding: 0 0.5rem;
-        margin-bottom: 2rem;
+        padding: 0.75rem 0.5rem;
     }
 
     a:hover {

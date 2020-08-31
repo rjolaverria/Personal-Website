@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.footer`
     color: white;
-    background-color: rgb(0, 122, 204);
+    background-color: var(--primary-color);
     position: fixed;
     bottom: 0;
     left: 0;

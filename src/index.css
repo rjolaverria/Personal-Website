@@ -1,8 +1,7 @@
 :root {
-    --primary-color: rgb(34, 34, 34);
-    --secondary-color: #2b2b2b;
-    --light-color: lightgrey;
-    --blue: rgb(0, 122, 204);
+    --primary-color: rgb(0, 120, 215);
+    --secondary-color: rgb(43, 43, 43);
+    --light-color: rgb(211, 211, 211);
 }
 
 body {

@@ -6,7 +6,7 @@ export const Container = styled.div`
 
     ${({ primary, secondary }) =>
         primary
-            ? 'border-left: 10px solid var(--blue)'
+            ? 'border-left: 10px solid var(--primary-color)'
             : secondary
             ? 'border-left: 10px solid rgba(0, 122, 204, 0.2)'
             : 'border-left: 10px solid #fff'};
@@ -14,7 +14,7 @@ export const Container = styled.div`
     &:hover {
         ${({ primary, secondary }) =>
             primary
-                ? 'border-left: 10px solid var(--blue)'
+                ? 'border-left: 10px solid var(--primary-color)'
                 : secondary
                 ? 'border-left: 10px solid rgba(0, 122, 204, 0.2)'
                 : 'border-left: 10px solid var(--light-color)'};
