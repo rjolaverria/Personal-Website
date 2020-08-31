@@ -1,5 +1,5 @@
 import React from 'react';
-import { Block, Code, Button } from '../components';
+import { Block, Code, Button, Accordion } from '../components';
 
 const Home = () => {
     return (
@@ -54,6 +54,41 @@ const Home = () => {
                     GitHub
                 </Button>
                 <Button border>Click me</Button>
+            </Block>
+            <Block>
+                <Block.Title>FAQs</Block.Title>
+                <Accordion>
+                    <Accordion.Item>
+                        <Accordion.Header index={1}>Header 1</Accordion.Header>
+                        <Accordion.Body index={1}>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Molestiae, earum ipsam obcaecati ratione amet
+                            voluptatem sit nihil quam repudiandae illum
+                            perferendis placeat voluptates assumenda
+                            voluptatibus nemo laborum. Excepturi, quas suscipit.
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item>
+                        <Accordion.Header index={2}>Header 2</Accordion.Header>
+                        <Accordion.Body index={2}>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Molestiae, earum ipsam obcaecati ratione amet
+                            voluptatem sit nihil quam repudiandae illum
+                            perferendis placeat voluptates assumenda
+                            voluptatibus nemo laborum. Excepturi, quas suscipit.
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item>
+                        <Accordion.Header index={3}>Header 3</Accordion.Header>
+                        <Accordion.Body index={3}>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Molestiae, earum ipsam obcaecati ratione amet
+                            voluptatem sit nihil quam repudiandae illum
+                            perferendis placeat voluptates assumenda
+                            voluptatibus nemo laborum. Excepturi, quas suscipit.
+                        </Accordion.Body>
+                    </Accordion.Item>
+                </Accordion>
             </Block>
         </section>
     );
