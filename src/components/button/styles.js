@@ -13,11 +13,11 @@ export const Container = styled.button`
             : border
             ? 'border: 3px solid var(--primary-color)'
             : ''};
-    padding: 15px 35px;
-    font-size: 20px;
+    padding: 0.5rem 0.875rem;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    margin: 0 0.5rem;
+    margin: 4px;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3);
     transition: 1s all;
 
