@@ -3,8 +3,8 @@ import { Container, Items, SocialLink, Info } from './styles';
 
 const Footer = () => (
     <Container>
+        <Items>&copy; Olaverria Co. LLC - 2020</Items>
         <Items>
-            &copy; Olaverria Co. LLC - 2020
             <SocialLink
                 href='https://www.linkedin.com/in/RafiOlaverria'
                 target='_blank'
@@ -22,6 +22,8 @@ const Footer = () => (
             <SocialLink href='#resume'>
                 <i className='fas fa-file'></i>
             </SocialLink>
+        </Items>
+        <Items>
             <Info>UTF-8</Info>
             <Info>React.js</Info>
             <Info>Prettier: &#10003;</Info>
