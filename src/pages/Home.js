@@ -1,5 +1,5 @@
 import React from 'react';
-import { Block, Code } from '../components';
+import { Block, Code, Button } from '../components';
 
 const Home = () => {
     return (
@@ -47,13 +47,13 @@ const Home = () => {
                     corporis, cumque ut beatae sed? Animi, quidem maxime?
                     Voluptatibus, repellendus sint.
                 </Block.Content>
-                <Code language='javascript'>
-                    {`if(code){
-  return code
-} else {
-  return code - 1
-  }`}
-                </Code>
+                <Button to='/about' primary>
+                    About
+                </Button>
+                <Button href='http://github.com' secondary>
+                    GitHub
+                </Button>
+                <Button border>Click me</Button>
             </Block>
         </section>
     );
