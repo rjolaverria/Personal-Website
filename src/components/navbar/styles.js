@@ -20,6 +20,23 @@ export const Items = styled.div`
     align-items: center;
     padding: 2rem 0;
 
+    a:hover {
+        color: white;
+    }
+`;
+
+export const Tab = styled(RouterLink)`
+    color: ${({ active }) => (active ? '#fff' : 'var(--light-color)')};
+    display: block;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 0.75rem 0.5rem;
+    border-left: 3px solid var(--secondary-color);
+    ${({ active }) => active && `border-left: 3px solid white;`}
+    transition: border 1s;
+`;
+
+export const Social = styled(Items)`
     a {
         color: var(--light-color);
         display: block;
@@ -27,19 +44,6 @@ export const Items = styled.div`
         text-decoration: none;
         padding: 0.75rem 0.5rem;
     }
-
-    a:hover {
-        color: white;
-    }
-`;
-
-export const Tab = styled(RouterLink)`
-    border-left: 3px solid var(--secondary-color);
-    ${({ active }) => active && `border-left: 3px solid white;`}
-    transition: border 1s;
-`;
-
-export const Social = styled(Items)`
     @media (max-height: 567px) {
         display: none;
     }
