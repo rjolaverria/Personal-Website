@@ -1,11 +1,12 @@
 import React from 'react';
+import { Title } from '../components';
 
 const Blog = () => {
-  return (
-    <div>
-      <h1 className='title'>Blog</h1>
-    </div>
-  );
+    return (
+        <div>
+            <Title>Blog</Title>
+        </div>
+    );
 };
 
 export default Blog;

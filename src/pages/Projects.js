@@ -1,11 +1,12 @@
 import React from 'react';
+import { Title } from '../components';
 
 const Projects = () => {
-  return (
-    <div>
-      <h1 className='title'>Projects</h1>
-    </div>
-  );
+    return (
+        <div>
+            <Title linePosition='right'>Projects</Title>
+        </div>
+    );
 };
 
 export default Projects;

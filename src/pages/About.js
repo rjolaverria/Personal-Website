@@ -1,11 +1,12 @@
 import React from 'react';
+import { Title } from '../components';
 
 const About = () => {
-  return (
-    <div>
-      <h1 className='title'>About</h1>
-    </div>
-  );
+    return (
+        <div>
+            <Title>About</Title>
+        </div>
+    );
 };
 
 export default About;

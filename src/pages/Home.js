@@ -1,10 +1,10 @@
 import React from 'react';
-import { Block, Code, Button, Accordion } from '../components';
+import { Block, Code, Button, Accordion, Title } from '../components';
 
 const Home = () => {
     return (
         <section>
-            <h1>Home</h1>
+            <Title linePosition='right'>Home</Title>
             <Block primary>
                 <Block.Title>A block</Block.Title>
                 <Block.SubTitle>
