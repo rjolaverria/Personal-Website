@@ -10,6 +10,7 @@ const Accordion = ({ children, ...restProps }) => {
         <Container {...restProps}>
             {children.map((child, index) => (
                 <AccordionContext.Provider
+                    key={index}
                     value={{ index, activeIndex, setActiveIndex }}
                 >
                     {child}
