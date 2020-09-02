@@ -41,7 +41,7 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h4`
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: white;
     font-weight: bold;
     margin-top: 0;
@@ -51,7 +51,7 @@ export const Title = styled.h4`
 
 export const Text = styled.p`
     margin-top: 5px;
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     color: white;
     margin-bottom: 0;
     user-select: none;
