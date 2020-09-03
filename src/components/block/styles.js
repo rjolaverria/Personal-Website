@@ -40,3 +40,9 @@ export const Content = styled.div`
     padding-bottom: 16px;
     font-weight: 500;
 `;
+
+export const Split = styled.div`
+    display: grid;
+    ${({ columns }) => columns && `grid-template-columns:${columns}`};
+    ${({ rows }) => rows && `grid-template-rows:${rows}`};
+`;
