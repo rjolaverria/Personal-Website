@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { Container, Image, Content, Title, Author, Shelf } from './styles';
 
-const Book = ({ children, image, link, ...restProps }) => {
+const Book = ({ children, image, link, big, ...restProps }) => {
     const ref = useRef(null);
     const [displayContent, setDisplayContent] = useState(false);
     return (
-        <Container {...restProps}>
+        <Container big={big} {...restProps}>
             <a href={link} target='_blank' rel='noreferrer noopener'>
                 <Image
                     ref={ref}
@@ -15,7 +15,7 @@ const Book = ({ children, image, link, ...restProps }) => {
                         setDisplayContent(true);
                     }}
                 />
-                {displayContent && <Content>{children}</Content>}
+                {displayContent && <Content big={big}>{children}</Content>}
             </a>
         </Container>
     );

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 100px;
-    height: 160px;
+    width: ${({ big }) => (big ? '200px' : '100px')};
+    height: ${({ big }) => (big ? '320px' : '160px')};
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -28,15 +28,18 @@ export const Image = styled.img`
 `;
 
 export const Content = styled.div`
+    width: ${({ big }) => (big ? '200px' : '100px')};
+    height: ${({ big }) => (big ? '320px' : '160px')};
     box-sizing: border-box;
-    width: 100px;
-    height: 160px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 0.625rem;
     background-color: #0000008f;
     color: #fff;
+
+    ${({ big }) => (big ? 'h5{font-size:1.75rem}' : '')};
+    ${({ big }) => (big ? 'h6{font-size:1rem}' : '')};
 `;
 
 export const Title = styled.h5`
