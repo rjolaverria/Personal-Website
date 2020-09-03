@@ -7,3 +7,4 @@ export { default as Button } from './button';
 export { default as Accordion } from './accordion';
 export { default as Title } from './title';
 export { default as Card } from './card';
+export { default as Book } from './book';
