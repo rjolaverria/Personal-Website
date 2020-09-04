@@ -42,7 +42,13 @@ export const Content = styled.div`
 `;
 
 export const Split = styled.div`
-    display: grid;
-    ${({ columns }) => columns && `grid-template-columns:${columns}`};
-    ${({ rows }) => rows && `grid-template-rows:${rows}`};
+    display: flex;
+
+    & > div {
+        margin: 0 1rem;
+    }
+
+    @media (max-width: 875px) {
+        flex-direction: column;
+    }
 `;
