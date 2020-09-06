@@ -26,7 +26,7 @@ export const Inner = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.5);
     color: #000;
 
     @media (max-width: 700px) {
