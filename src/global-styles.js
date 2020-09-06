@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyles = createGlobalStyle`
 :root {
     --primary-color: rgb(0, 120, 215);
     --secondary-color: rgb(43, 43, 43);
@@ -17,3 +20,19 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
 }
+
+`;
+
+export const LockBody = createGlobalStyle`
+    body {
+        overflow: hidden
+    }
+`;
+
+export const ReleaseBody = createGlobalStyle`
+    body {
+        overflow: visible
+    }
+`;
+
+export default GlobalStyles;

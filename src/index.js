@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ContentContextProvider } from './context/ContentContext';
+import GlobalStyles from './global-styles';
 
 ReactDOM.render(
     <React.StrictMode>
         <ContentContextProvider>
+            <GlobalStyles />
             <App />
         </ContentContextProvider>
     </React.StrictMode>,
