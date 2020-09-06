@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title, Modal } from '../components';
+import { Title, Modal, Carousel } from '../components';
 
 const About = () => {
     return (
@@ -15,6 +15,12 @@ const About = () => {
                 </Modal.Content>
                 <Modal.Exit>Close</Modal.Exit>
             </Modal>
+            <Carousel>
+                <Carousel.Item src={'/images/AdobeStock_72656082.jpeg'} />
+                <Carousel.Item src={'/images/AdobeStock_40283365.jpeg'} />
+                <Carousel.Item src={'/images/AdobeStock_96003689.jpeg'} />
+                <Carousel.Item src={'/images/AdobeStock_72656082.jpeg'} />
+            </Carousel>
         </div>
     );
 };

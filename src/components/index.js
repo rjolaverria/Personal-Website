@@ -9,3 +9,4 @@ export { default as Title } from './title';
 export { default as Card } from './card';
 export { default as Book } from './book';
 export { default as Modal } from './modal';
+export { default as Carousel } from './carousel';
