@@ -56,6 +56,7 @@ const Blog = () => {
                                               <Book
                                                   key={index}
                                                   image={book.image}
+                                                  link={book.link[0]}
                                               >
                                                   <Book.Title>
                                                       {book.title}
