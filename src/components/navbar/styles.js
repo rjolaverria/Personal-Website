@@ -11,7 +11,74 @@ export const Container = styled.nav`
     justify-content: space-between;
     flex-direction: column;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
+    transition: all 0.6s;
+
+    @media (max-width: 450px) {
+        transform: ${({ visible }) => (visible ? '' : 'translateX(-300px)')};
+        ${({ visible }) =>
+            visible ? 'box-shadow: 5px 0 5px 0 rgba(0,0,0,0.2)' : ''};
+    }
+`;
+
+export const TopContainer = styled.div`
+    display: none;
+    @media (max-width: 450px) {
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        padding: 1rem;
+        justify-content: flex-end;
+        color: #fff;
+        z-index: 1;
+        ${({ visible }) => (visible ? 'width: 100%' : '')};
+        ${({ visible }) => (visible ? 'height: 100%' : '')};
+        ${({ visible }) =>
+            visible ? 'background-color: rgba(0,0,0,0.4)' : ''};
+    }
+`;
+
+export const MenuIcon = styled.div`
+    margin-top: 5px;
+    width: 30px;
+    height: 5px;
+    background-color: var(--primary-color);
+    position: relative;
+    transition: all 0.5s ease;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+    ${({ visible }) => (visible ? 'transform: rotate(43deg)' : '')};
+    ${({ visible }) => (visible ? 'background-color: #fff' : '')};
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        width: 80%;
+        height: 5px;
+        background: inherit;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+        transition: all 0.5s ease;
+    }
+
+    &:after {
+        top: 10px;
+        width: 60%;
+    }
+
+    &:before,
+    &:after {
+        ${({ visible }) => (visible ? 'background-color: #fff' : '')};
+        ${({ visible }) => (visible ? 'transform: rotate(95deg)' : '')};
+        ${({ visible }) => (visible ? 'top: 0' : '')};
+        ${({ visible }) => (visible ? 'width: 100%' : '')};
+        ${({ visible }) => (visible ? 'box-shadow: none' : '')};
+    }
 `;
 
 export const Items = styled.div`
