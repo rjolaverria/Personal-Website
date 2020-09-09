@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Title, Block, Book } from '../components';
+import { Container, Title, Block, Book } from '../components';
 import { ContentContext } from '../context/ContentContext';
 
 const Blog = () => {
@@ -7,13 +7,12 @@ const Blog = () => {
         books: { currentBook, booksRead },
     } = useContext(ContentContext);
 
-    console.log(currentBook);
     return (
-        <>
+        <Container>
             <Title>Blog</Title>
             <Block>
                 <Block.Title>
-                    Book Shelf{'  '}
+                    Book Shelf{' | '}
                     <a
                         href='https://www.goodreads.com/review/list/105003741?shelf=read'
                         target='_blank'
@@ -75,7 +74,7 @@ const Blog = () => {
                     </div>
                 </Block.Split>
             </Block>
-        </>
+        </Container>
     );
 };
 

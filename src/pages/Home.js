@@ -1,9 +1,16 @@
 import React from 'react';
-import { Block, Code, Button, Accordion, Title } from '../components';
+import {
+    Container,
+    Block,
+    Code,
+    Button,
+    Accordion,
+    Title,
+} from '../components';
 
 const Home = () => {
     return (
-        <section>
+        <Container>
             <Title linePosition='right'>Home</Title>
             <Block primary>
                 <Block.Title>A block</Block.Title>
@@ -90,7 +97,7 @@ const Home = () => {
                     </Accordion.Item>
                 </Accordion>
             </Block>
-        </section>
+        </Container>
     );
 };
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Title, Modal, Carousel } from '../components';
+import { Container, Title, Modal, Carousel } from '../components';
 
 const About = () => {
     return (
-        <div>
+        <Container>
             <Title>About</Title>
             <Modal>
                 <Modal.Title>This is a Modal</Modal.Title>
@@ -21,7 +21,7 @@ const About = () => {
                 <Carousel.Item src={'/images/AdobeStock_96003689.jpeg'} />
                 <Carousel.Item src={'/images/AdobeStock_72656082.jpeg'} />
             </Carousel>
-        </div>
+        </Container>
     );
 };
 

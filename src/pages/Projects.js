@@ -1,9 +1,9 @@
 import React from 'react';
-import { Title, Card } from '../components';
+import { Container, Title, Card } from '../components';
 
 const Projects = () => {
     return (
-        <div>
+        <Container>
             <Title linePosition='right'>Projects</Title>
             <Card image='/images/AdobeStock_96003689.jpeg'>
                 <Card.Title>Title</Card.Title>
@@ -13,7 +13,7 @@ const Projects = () => {
                 <Card.Title>Title</Card.Title>
                 <Card.Text>Text goes here</Card.Text>
             </Card>
-        </div>
+        </Container>
     );
 };
 
