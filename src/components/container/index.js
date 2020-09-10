@@ -1,8 +1,8 @@
 import React from 'react';
-import { Main } from './styles';
+import { Div } from './styles';
 
 const Container = ({ children, ...restProps }) => (
-    <Main {...restProps}>{children}</Main>
+    <Div {...restProps}>{children}</Div>
 );
 
 export default Container;
