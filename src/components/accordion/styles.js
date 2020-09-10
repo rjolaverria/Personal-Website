@@ -4,6 +4,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     width: 75%;
+    max-width: 600px;
 `;
 
 export const Item = styled.div`
