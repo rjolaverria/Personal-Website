@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Container, Title, Block, Book } from '../components';
+import { Container, Title, Block, BookCard } from '../components';
 import { ContentContext } from '../context/ContentContext';
 
 const Blog = () => {
@@ -29,48 +29,50 @@ const Blog = () => {
                     <div>
                         <Block.SubTitle>Currently Reading</Block.SubTitle>
                         {currentBook ? (
-                            <Book.Shelf>
-                                <Book
+                            <BookCard.Shelf>
+                                <BookCard
                                     big
                                     image={currentBook.image}
                                     link={currentBook.link[0]}
                                 >
-                                    <Book.Title>{currentBook.title}</Book.Title>
-                                    <Book.Author>
+                                    <BookCard.Title>
+                                        {currentBook.title}
+                                    </BookCard.Title>
+                                    <BookCard.Author>
                                         {currentBook.authors[0].author[0].name}
-                                    </Book.Author>
-                                </Book>
-                            </Book.Shelf>
+                                    </BookCard.Author>
+                                </BookCard>
+                            </BookCard.Shelf>
                         ) : (
                             'Loading...'
                         )}
                     </div>
                     <div>
                         <Block.SubTitle>Previously Read</Block.SubTitle>
-                        <Book.Shelf>
+                        <BookCard.Shelf>
                             {booksRead
                                 ? booksRead.map(
                                       (book, index) =>
                                           book.isbn[0] > 0 && (
-                                              <Book
+                                              <BookCard
                                                   key={index}
                                                   image={book.image}
                                                   link={book.link[0]}
                                               >
-                                                  <Book.Title>
+                                                  <BookCard.Title>
                                                       {book.title}
-                                                  </Book.Title>
-                                                  <Book.Author>
+                                                  </BookCard.Title>
+                                                  <BookCard.Author>
                                                       {
                                                           book.authors[0]
                                                               .author[0].name
                                                       }
-                                                  </Book.Author>
-                                              </Book>
+                                                  </BookCard.Author>
+                                              </BookCard>
                                           )
                                   )
                                 : 'Loading'}
-                        </Book.Shelf>
+                        </BookCard.Shelf>
                     </div>
                 </Block.Split>
             </Block>
