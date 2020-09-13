@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, createContext } from 'react';
+import React, { useState, useContext, createContext } from 'react';
 import { Container, Message, Progress, Inner, Close } from './styles';
 
 const AlertContext = createContext();
@@ -8,19 +8,17 @@ const Alert = ({ children, ...restProps }) => {
     const [visible, setVisible] = useState(false);
     const [time, setTime] = useState(5);
 
-    useEffect(() => {
-        const hide = setTimeout(() => {
-            setVisible(false);
-            setMessage('');
-        }, time * 1000);
-        return () => {
-            clearTimeout(hide);
-        };
-    }, [visible, message, time]);
     return (
         <AlertContext.Provider value={{ setMessage, setVisible, setTime }}>
             {visible && (
-                <Container {...restProps} time={time}>
+                <Container
+                    {...restProps}
+                    time={time}
+                    onAnimationEnd={() => {
+                        setVisible(false);
+                        setMessage('');
+                    }}
+                >
                     <Inner>
                         <Message>{message}</Message>
                         <Progress {...restProps} time={time} />
