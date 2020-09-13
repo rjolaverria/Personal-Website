@@ -21,7 +21,7 @@ const Navbar = () => {
             <Container visible={visible}>
                 <Items
                     onClick={() => {
-                        setVisibility(!visible);
+                        setVisibility(false);
                     }}
                 >
                     <Tab to='/' active={current === '/' ? 'true' : ''}>
