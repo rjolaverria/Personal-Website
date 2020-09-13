@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Title, SubTitle, Content, Split } from './styles';
+import { Container, Title, SubTitle, Content, Section } from './styles';
 
 const Block = ({ children, ...restProps }) => (
     <Container {...restProps}>{children}</Container>
@@ -17,7 +17,7 @@ Block.Content = ({ children, ...restProps }) => (
     <Content {...restProps}>{children}</Content>
 );
 
-Block.Split = ({ children, ...restProps }) => (
-    <Split {...restProps}>{children}</Split>
+Block.Section = ({ children, ...restProps }) => (
+    <Section {...restProps}>{children}</Section>
 );
 export default Block;

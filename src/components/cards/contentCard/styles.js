@@ -59,6 +59,7 @@ export const Body = styled.p`
     font-size: 1.1rem;
     margin-top: 0;
     line-height: 1.2;
+    max-width: 500px;
 `;
 
 export const Footer = styled.div`

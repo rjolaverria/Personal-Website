@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding-left: 20px;
+    display: flex;
+    flex-direction: column;
 
     ${({ primary, secondary }) =>
         primary
@@ -18,6 +20,10 @@ export const Container = styled.div`
                 : secondary
                 ? 'border-left: 10px solid rgba(0, 122, 204, 0.2)'
                 : 'border-left: 10px solid var(--light-color)'};
+    }
+
+    @media (max-width: 645px) {
+        margin-left: 0;
     }
 `;
 
@@ -41,14 +47,11 @@ export const Content = styled.div`
     font-weight: 500;
 `;
 
-export const Split = styled.div`
+export const Section = styled.div`
     display: flex;
+    justify-content: flex-start;
 
-    & > div {
-        margin: 0 1rem;
-    }
-
-    @media (max-width: 875px) {
+    @media (max-width: 645px) {
         flex-direction: column;
     }
 `;
