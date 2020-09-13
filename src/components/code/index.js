@@ -1,11 +1,12 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { Container, Head, Button } from './styles';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Alert } from '../';
 
 const Code = ({ children, language, title, ...restProps }) => {
     const code = useRef(null);
-    const [copied, setCopied] = useState(false);
+    const setAlert = Alert.useAlert();
     return (
         <Container {...restProps}>
             {title ? (
@@ -37,14 +38,12 @@ const Code = ({ children, language, title, ...restProps }) => {
                     ) : (
                         ''
                     )}
-                    {copied && <span>Copied to clipboard</span>}
                     {
                         <Button
                             onClick={() => {
                                 code.current.select();
                                 document.execCommand('copy');
-                                setCopied(true);
-                                setTimeout(() => setCopied(false), 5000);
+                                setAlert('Copied to clipboard');
                             }}
                         >
                             <i className='far fa-copy'></i>

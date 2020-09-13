@@ -7,9 +7,11 @@ import {
     Accordion,
     Title,
     Badge,
+    Alert,
 } from '../components';
 
 const Home = () => {
+    const setAlert = Alert.useAlert();
     return (
         <Container>
             <Title linePosition='right'>Home</Title>
@@ -63,7 +65,12 @@ const Home = () => {
                 <Button href='http://github.com' secondary>
                     GitHub
                 </Button>
-                <Button border>Click me</Button>
+                <Button
+                    border
+                    onClick={() => setAlert('This is a Message!', 10)}
+                >
+                    Click me
+                </Button>
             </Block>
             <Block>
                 <Block.Title>FAQs</Block.Title>
