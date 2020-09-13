@@ -11,3 +11,4 @@ export { default as BookCard } from './cards/bookCard';
 export { default as Card } from './cards/contentCard';
 export { default as Modal } from './modal';
 export { default as Carousel } from './carousel';
+export { default as Badge } from './badge';
