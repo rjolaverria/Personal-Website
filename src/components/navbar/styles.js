@@ -21,7 +21,7 @@ export const Container = styled.nav`
     }
 `;
 
-export const TopContainer = styled.div`
+export const Mobile = styled.div`
     display: none;
     @media (max-width: 450px) {
         box-sizing: border-box;
@@ -43,7 +43,7 @@ export const TopContainer = styled.div`
     }
 `;
 
-export const MenuIcon = styled.div`
+export const ToggleMobile = styled.div`
     margin-top: 5px;
     width: 30px;
     height: 5px;
@@ -101,6 +101,15 @@ export const Tab = styled(RouterLink)`
     border-left: 3px solid var(--secondary-color);
     ${({ active }) => active && `border-left: 3px solid white;`}
     transition: border 1s;
+    position: relative;
+
+    /* For Notifications*/
+    span,
+    div {
+        position: absolute;
+        bottom: 10px;
+        left: 25px;
+    }
 `;
 
 export const Social = styled(Items)`

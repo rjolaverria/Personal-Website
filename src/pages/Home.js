@@ -6,6 +6,7 @@ import {
     Button,
     Accordion,
     Title,
+    Badge,
 } from '../components';
 
 const Home = () => {
@@ -13,7 +14,9 @@ const Home = () => {
         <Container>
             <Title linePosition='right'>Home</Title>
             <Block primary>
-                <Block.Title>A block</Block.Title>
+                <Block.Title>
+                    A block <Badge small>123456</Badge>
+                </Block.Title>
                 <Block.SubTitle>
                     The Body of the block. Lorem, ipsum dolor sit amet
                     consectetur adipisicing elit. Quidem cum quisquam voluptates
