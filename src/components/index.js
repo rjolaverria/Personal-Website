@@ -12,3 +12,4 @@ export { default as Card } from './cards/contentCard';
 export { default as Modal } from './modal';
 export { default as Carousel } from './carousel';
 export { default as Badge } from './badge';
+export { default as Alert } from './alert';

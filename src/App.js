@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './containers/Navigation';
+import { Alert } from './components';
 
 // Pages
 import Home from './pages/Home';
@@ -10,8 +11,8 @@ import About from './pages/About';
 
 const App = () => (
     <Router>
-        <>
-            <Navigation />
+        <Navigation />
+        <Alert>
             <Switch>
                 <Route exact path='/'>
                     <Home />
@@ -26,7 +27,7 @@ const App = () => (
                     <Blog />
                 </Route>
             </Switch>
-        </>
+        </Alert>
     </Router>
 );
 
