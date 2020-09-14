@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { ContentContextProvider } from './context/ContentContext';
+import { AppContextProvider } from './context/AppContext';
 import GlobalStyles from './global-styles';
 
 ReactDOM.render(
     <React.StrictMode>
-        <ContentContextProvider>
+        <AppContextProvider>
             <GlobalStyles />
             <App />
-        </ContentContextProvider>
+        </AppContextProvider>
     </React.StrictMode>,
     document.getElementById('root')
 );
