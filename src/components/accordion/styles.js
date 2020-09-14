@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    width: 75%;
+    min-width: 300px;
     max-width: 600px;
 `;
 
@@ -12,12 +12,7 @@ export const Item = styled.div`
     font-size: 1.2rem;
     font-weight: 500;
     user-select: none;
-    width: 90%;
     margin-bottom: 1px;
-
-    div {
-        transition: max-height 0.5s cubic-bezier(0.5, 0, 0.1, 1);
-    }
 
     @media (max-width: 600px) {
         font-size: 1rem;
@@ -31,17 +26,17 @@ export const Header = styled.div`
     border-bottom: 1px solid var(--light-color);
     background: var(--secondary-color);
     padding: 10px 20px;
-    width: 100%;
 `;
 
 export const Body = styled.div`
     line-height: normal;
     background: var(--secondary-color);
     filter: brightness(150%);
-    padding: ${({ active }) => (active ? '10px 20px' : 0)};
-    width: 100%;
+    padding: ${({ active }) => (active ? '10px 20px' : '0px 20px')};
+    font-size: ${({ active }) => (active ? '1rem' : 0)};
     height: ${({ active }) => (active ? 'auto' : 0)};
     visibility: ${({ active }) => (active ? 'visible' : 'hidden')};
+    transition: padding 0.5s, visibility 0.5s;
 
     @media (max-width: 600px) {
         font-size: 1rem;
