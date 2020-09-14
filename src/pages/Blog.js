@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { Container, Title, Block, BookCard } from '../components';
-import { ContentContext } from '../context/ContentContext';
+import { AppContext } from '../context/AppContext';
 
 const Blog = () => {
     const {
         books: { currentBook, booksRead },
-    } = useContext(ContentContext);
+    } = useContext(AppContext);
 
     return (
         <Container>

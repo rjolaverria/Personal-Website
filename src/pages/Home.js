@@ -7,11 +7,11 @@ import {
     Accordion,
     Title,
     Badge,
-    Alert,
 } from '../components';
+import { useAlert } from '../hooks';
 
 const Home = () => {
-    const setAlert = Alert.useAlert();
+    const setAlert = useAlert();
     return (
         <Container>
             <Title linePosition='right'>Home</Title>

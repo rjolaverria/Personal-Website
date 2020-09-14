@@ -2,11 +2,11 @@ import React, { useRef } from 'react';
 import { Container, Head, Button } from './styles';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { Alert } from '../';
+import { useAlert } from '../../hooks';
 
 const Code = ({ children, language, title, ...restProps }) => {
     const code = useRef(null);
-    const setAlert = Alert.useAlert();
+    const setAlert = useAlert();
     return (
         <Container {...restProps}>
             {title ? (

@@ -1,47 +1,43 @@
-import React, { useState, useContext, createContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Container, Message, Progress, Inner, Close } from './styles';
+import { AppContext } from '../../context/AppContext';
 
-const AlertContext = createContext();
-
-const Alert = ({ children, ...restProps }) => {
-    const [message, setMessage] = useState('This is an Alert');
+const Alert = ({ children, time = 5, ...restProps }) => {
+    const { alert, setAlert } = useContext(AppContext);
     const [visible, setVisible] = useState(false);
-    const [time, setTime] = useState(5);
+
+    useEffect(() => {
+        if (alert) {
+            setVisible(true);
+        }
+    }, [alert]);
 
     return (
-        <AlertContext.Provider value={{ setMessage, setVisible, setTime }}>
+        <>
             {visible && (
                 <Container
                     {...restProps}
                     time={time}
                     onAnimationEnd={() => {
                         setVisible(false);
-                        setMessage('');
+                        setAlert('');
                     }}
                 >
                     <Inner>
-                        <Message>{message}</Message>
+                        <Message>{alert}</Message>
                         <Progress {...restProps} time={time} />
-                        <Close onClick={() => setVisible(false)} />
+                        <Close
+                            onClick={() => {
+                                setVisible(false);
+                                setAlert('');
+                            }}
+                        />
                     </Inner>
                 </Container>
             )}
             {children}
-        </AlertContext.Provider>
+        </>
     );
-};
-
-Alert.useAlert = function useAlert() {
-    const { setMessage, setVisible, setTime } = useContext(AlertContext);
-    const setAlert = (message, time) => {
-        setVisible(true);
-        setMessage(message);
-        if (time) {
-            setTime(time);
-        }
-    };
-
-    return setAlert;
 };
 
 export default Alert;
