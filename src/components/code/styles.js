@@ -4,6 +4,12 @@ export const Container = styled.div`
     color: #fff;
     background-color: var(--secondary-color);
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+
+    & > input {
+        visibility: hidden;
+        position: 'absolute';
+        background-color: red;
+    }
 `;
 
 export const Head = styled.div`

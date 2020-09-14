@@ -51,21 +51,13 @@ const Code = ({ children, language, title, ...restProps }) => {
                     }
                 </Head>
             )}
-
-            <input
-                ref={code}
-                type='text'
-                value={children}
-                style={{ zIndex: -200, position: 'absolute' }}
-                readOnly
-            />
-
             <SyntaxHighlighter
                 language={language}
                 style={{ margin: 0, ...a11yDark }}
             >
                 {children}
             </SyntaxHighlighter>
+            <input ref={code} type='text' value={children} readOnly />
         </Container>
     );
 };
