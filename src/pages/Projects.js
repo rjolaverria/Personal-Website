@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-    Container,
-    Title,
-    VideoCard,
-    Block,
-    Card,
-    Button,
-} from '../components';
+import { Container, Title, VideoCard, Block, Card } from '../components';
 
 const Projects = () => {
     return (
@@ -31,10 +24,9 @@ const Projects = () => {
                         elit. Unde obcaecati fugiat, fuga ratione optio at eos
                         temporibus.
                     </Card.Body>
-                    <Card.Footer>
-                        <Card.Info>Some info here</Card.Info>
-                        <Button primary>Click me</Button>
-                    </Card.Footer>
+
+                    <Card.Info>Some info here</Card.Info>
+                    <Card.Button primary>Click me</Card.Button>
                 </Card>
             </Block>
         </Container>

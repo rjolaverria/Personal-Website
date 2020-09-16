@@ -1,10 +1,10 @@
 import React from 'react';
-import { Container, Image, Content, Title, Body, Footer, Info } from './styles';
+import { Container, Image, Title, Body, Info, CardButton } from './styles';
 
 const ContentCard = ({ children, image, ...restProps }) => (
     <Container {...restProps}>
         {image && <Image src={image} />}
-        <Content>{children}</Content>
+        {children}
     </Container>
 );
 
@@ -16,12 +16,12 @@ ContentCard.Body = ({ children, ...restProps }) => (
     <Body {...restProps}>{children}</Body>
 );
 
-ContentCard.Footer = ({ children, ...restProps }) => (
-    <Footer {...restProps}>{children}</Footer>
-);
-
 ContentCard.Info = ({ children, ...restProps }) => (
     <Info {...restProps}>{children}</Info>
+);
+
+ContentCard.Button = ({ children, ...restProps }) => (
+    <CardButton {...restProps}>{children}</CardButton>
 );
 
 export default ContentCard;
