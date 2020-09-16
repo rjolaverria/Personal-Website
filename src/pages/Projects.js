@@ -6,18 +6,18 @@ const Projects = () => {
         <Container>
             <Title linePosition='right'>Projects</Title>
             <Block>
-                <VideoCard image='/images/AdobeStock_96003689.jpeg'>
+                <VideoCard image='https://picsum.photos/300/200?random=1'>
                     <VideoCard.Title>Title</VideoCard.Title>
                     <VideoCard.Text>Text goes here</VideoCard.Text>
                 </VideoCard>
-                <VideoCard image='/images/AdobeStock_96003689.jpeg'>
+                <VideoCard image='https://picsum.photos/300/200?random=2'>
                     <VideoCard.Title>Title</VideoCard.Title>
                     <VideoCard.Text>Text goes here</VideoCard.Text>
                 </VideoCard>
             </Block>
 
             <Block>
-                <Card image='/images/AdobeStock_96003689.jpeg'>
+                <Card image='https://picsum.photos/300/200?random=3'>
                     <Card.Title>Title</Card.Title>
                     <Card.Body>
                         Lorem, ipsum dolor sit amet consectetur adipisicing

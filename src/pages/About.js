@@ -16,10 +16,10 @@ const About = () => {
                 <Modal.Exit>Close</Modal.Exit>
             </Modal>
             <Carousel>
-                <Carousel.Item src={'/images/AdobeStock_72656082.jpeg'} />
-                <Carousel.Item src={'/images/AdobeStock_40283365.jpeg'} />
-                <Carousel.Item src={'/images/AdobeStock_96003689.jpeg'} />
-                <Carousel.Item src={'/images/AdobeStock_72656082.jpeg'} />
+                <Carousel.Item src={'https://picsum.photos/400/200?random=1'} />
+                <Carousel.Item src={'https://picsum.photos/400/200?random=2'} />
+                <Carousel.Item src={'https://picsum.photos/400/200?random=3'} />
+                <Carousel.Item src={'https://picsum.photos/400/200?random=4'} />
             </Carousel>
         </Container>
     );
