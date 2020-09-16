@@ -1,63 +1,59 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Container, Head, Button } from './styles';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useAlert } from '../../hooks';
 
 const Code = ({ children, language, title, ...restProps }) => {
-    const code = useRef(null);
     const setAlert = useAlert();
+
+    let icon;
+    switch (language) {
+        case 'javascript':
+            icon = <i className='fab fa-js' style={{ color: '#F0DB4F' }}></i>;
+            break;
+        case 'html':
+            icon = (
+                <i className='fab fa-html5' style={{ color: '#E34C26' }}></i>
+            );
+            break;
+        case 'python':
+            icon = (
+                <i className='fab fa-python' style={{ color: '#4B8BBE' }}></i>
+            );
+            break;
+        case 'jsx':
+            icon = (
+                <i className='fab fa-react' style={{ color: '#61DBFB' }}></i>
+            );
+            break;
+        default:
+            icon = null;
+    }
+
+    const handleCopy = () => {
+        navigator.clipboard
+            .writeText(children)
+            .then(() => setAlert('Copied to clipboard'));
+    };
+
     return (
         <Container {...restProps}>
-            {title ? (
-                <Head>
+            <Head>
+                {title ? (
                     <h3>{title}</h3>
-                </Head>
-            ) : (
-                <Head>
-                    {language === 'javascript' ? (
-                        <i
-                            className='fab fa-js'
-                            style={{ color: '#F0DB4F' }}
-                        ></i>
-                    ) : language === 'html' ? (
-                        <i
-                            className='fab fa-html5'
-                            style={{ color: '#E34C26' }}
-                        ></i>
-                    ) : language === 'python' ? (
-                        <i
-                            className='fab fa-python'
-                            style={{ color: '#4B8BBE' }}
-                        ></i>
-                    ) : language === 'jsx' ? (
-                        <i
-                            className='fab fa-react'
-                            style={{ color: '#61DBFB' }}
-                        ></i>
-                    ) : (
-                        ''
-                    )}
-                    {
-                        <Button
-                            onClick={() => {
-                                code.current.select();
-                                document.execCommand('copy');
-                                setAlert('Copied to clipboard');
-                            }}
-                        >
+                ) : (
+                    <>
+                        {icon}
+                        <Button onClick={handleCopy}>
                             <i className='far fa-copy'></i>
                         </Button>
-                    }
-                </Head>
-            )}
-            <SyntaxHighlighter
-                language={language}
-                style={{ margin: 0, ...a11yDark }}
-            >
+                    </>
+                )}
+            </Head>
+            <SyntaxHighlighter language={language} style={a11yDark}>
                 {children}
             </SyntaxHighlighter>
-            <input ref={code} type='text' value={children} readOnly />
         </Container>
     );
 };

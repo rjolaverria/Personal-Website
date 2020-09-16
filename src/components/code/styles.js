@@ -6,9 +6,15 @@ export const Container = styled.div`
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
 
     & > input {
-        visibility: hidden;
-        position: 'absolute';
-        background-color: red;
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        color: transparent;
+        z-index: -200;
+        font-size: 0.001rem;
+    }
+    & > input:focus {
+        outline: 0;
     }
 `;
 
