@@ -1,11 +1,23 @@
-import React, { useState, useContext, createContext } from 'react';
+import React, { useState, useContext, useEffect, createContext } from 'react';
 import { Container, Mobile, Items, Social, Tab, ToggleMobile } from './styles';
 import { LockBody, ReleaseBody } from '../../global-styles';
 
 const NavbarContext = createContext();
 
-const Navbar = ({ children, ...restProps }) => {
+const Navbar = ({ children }) => {
     const [visible, setVisibility] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.screen.width >= 450) {
+                setVisibility(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
         <NavbarContext.Provider value={{ setVisibility }}>
