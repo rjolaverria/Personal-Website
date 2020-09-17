@@ -6,8 +6,8 @@ const style = css`
     text-decoration: none;
     vertical-align: middle;
     text-align: center;
-    align-self: flex-start;
     user-select: none;
+    width: fit-content;
     padding: 0.5rem 0.875rem;
     font-size: 1rem;
     font-weight: 600;
