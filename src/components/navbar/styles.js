@@ -94,7 +94,9 @@ export const Items = styled.div`
 
 export const Tab = styled(RouterLink)`
     color: ${({ active }) => (active ? '#fff' : 'var(--light-color)')};
-    display: block;
+    display: grid;
+    grid-gap: 8px;
+    grid-template: repeat(3, auto) / repeat(3, auto);
     font-size: 2rem;
     text-decoration: none;
     padding: 0.75rem 0.5rem;
@@ -103,12 +105,14 @@ export const Tab = styled(RouterLink)`
     transition: border 1s;
     position: relative;
 
-    /* For Notifications*/
-    span,
-    div {
-        position: absolute;
-        bottom: 10px;
-        left: 25px;
+    & > i {
+        grid-row: 1 / -1;
+        grid-column: 1/-1;
+    }
+
+    & > span {
+        grid-row: 3;
+        grid-column: 3;
     }
 `;
 
