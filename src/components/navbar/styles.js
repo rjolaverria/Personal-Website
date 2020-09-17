@@ -116,6 +116,7 @@ export const Tab = styled(RouterLink)`
 `;
 
 export const Social = styled(Items)`
+    align-items: center;
     a {
         color: var(--light-color);
         display: block;
