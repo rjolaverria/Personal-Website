@@ -23,10 +23,7 @@ const Navigation = () => {
                         to='projects'
                         active={current === '/projects' ? 'true' : ''}
                     >
-                        <i
-                            className='fas fa-code-branch'
-                            style={{ padding: '0 0.37rem' }}
-                        ></i>
+                        <i className='fas fa-code-branch'></i>
                         <Badge pill small>
                             3
                         </Badge>

@@ -7,9 +7,8 @@ export const Container = styled.nav`
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    display: grid;
+    grid-template: 2fr 1fr / auto;
     height: 100%;
     z-index: 2;
     transition: all 0.6s;
@@ -84,12 +83,8 @@ export const ToggleMobile = styled.div`
 export const Items = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
-
-    a:hover {
-        color: white;
-    }
+    align-items: flex-start;
+    padding: 1rem 0;
 `;
 
 export const Tab = styled(RouterLink)`
@@ -104,6 +99,10 @@ export const Tab = styled(RouterLink)`
     ${({ active }) => active && `border-left: 3px solid white;`}
     transition: border 1s;
     position: relative;
+
+    &:hover {
+        color: white;
+    }
 
     & > i {
         grid-row: 1 / -1;
