@@ -13,3 +13,4 @@ export { default as Modal } from './modal';
 export { default as Carousel } from './carousel';
 export { default as Badge } from './badge';
 export { default as Alert } from './alert';
+export { default as Loading } from './loading';
