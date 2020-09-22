@@ -6,7 +6,7 @@ export const Div = styled.div`
     max-width: 1200px;
 
     @media (max-width: 600px) {
-        padding: 2rem 1.5rem;
+        padding: 3rem 2rem 3rem 2rem;
         margin: 0 auto;
     }
 `;
