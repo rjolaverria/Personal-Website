@@ -7,7 +7,7 @@ export { default as Button } from './button';
 export { default as Accordion } from './accordion';
 export { default as Title } from './title';
 export { default as VideoCard } from './cards/videoCard';
-export { default as BookCard } from './cards/bookCard';
+export { default as Book } from './book';
 export { default as Card } from './cards/contentCard';
 export { default as Modal } from './modal';
 export { default as Carousel } from './carousel';
