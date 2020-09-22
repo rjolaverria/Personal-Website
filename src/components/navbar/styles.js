@@ -13,7 +13,7 @@ export const Container = styled.nav`
     z-index: 2;
     transition: all 0.6s;
 
-    @media (max-width: 450px) {
+    @media (max-width: 600px) {
         transform: ${({ visible }) => (visible ? '' : 'translateX(-300px)')};
         ${({ visible }) =>
             visible ? 'box-shadow: 5px 0 5px 0 rgba(0,0,0,0.2)' : ''};
@@ -22,7 +22,7 @@ export const Container = styled.nav`
 
 export const Mobile = styled.div`
     display: none;
-    @media (max-width: 450px) {
+    @media (max-width: 600px) {
         box-sizing: border-box;
         position: fixed;
         top: 0;
