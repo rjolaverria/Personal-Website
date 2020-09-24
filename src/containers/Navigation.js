@@ -56,29 +56,33 @@ const Navigation = () => {
                 </Navbar.Social>
             </Navbar>
             <Footer>
-                <Footer.Items>&copy; Olaverria Co. LLC - 2020</Footer.Items>
+                <Footer.Items>
+                    <Footer.Info>
+                        <img src='/icons/projects.svg' alt='Projects' /> master*
+                    </Footer.Info>
+                </Footer.Items>
                 <Footer.Items>
                     <Footer.SocialLink
                         href='https://www.linkedin.com/in/RafiOlaverria'
                         target='_blank'
                         rel='noopener noreferrer'
                     >
-                        <i className='fab fa-linkedin-in'></i>
+                        <img src='/icons/linkedin.svg' alt='' />
                     </Footer.SocialLink>
                     <Footer.SocialLink
                         href='https://github.com/rjolaverria'
                         target='_blank'
                         rel='noopener noreferrer'
                     >
-                        <i className='fab fa-github-alt'></i>
+                        <img src='/icons/github.svg' alt='' />
                     </Footer.SocialLink>
                     <Footer.SocialLink href='#resume'>
-                        <i className='fas fa-file'></i>
+                        <img src='/icons/resume.svg' alt='' />
                     </Footer.SocialLink>
                 </Footer.Items>
                 <Footer.Items>
                     <Footer.Info>UTF-8</Footer.Info>
-                    <Footer.Info>React.js</Footer.Info>
+                    <Footer.Info>React</Footer.Info>
                     <Footer.Info>Prettier: &#10003;</Footer.Info>
                 </Footer.Items>
             </Footer>

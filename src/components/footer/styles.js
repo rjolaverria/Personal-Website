@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.footer`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr;
     color: white;
+    font-size: 0.9rem;
     background-color: var(--primary-color);
     position: fixed;
     bottom: 0;
@@ -24,7 +25,14 @@ export const Items = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.4rem 1rem;
+    padding: 0.3rem 1rem;
+
+    &:nth-of-type(3) {
+        justify-content: space-evenly;
+    }
+    img {
+        width: 15px;
+    }
 `;
 
 export const SocialLink = styled.a`
@@ -32,10 +40,12 @@ export const SocialLink = styled.a`
 
     @media (max-height: 567px) {
         display: block;
-        color: white;
     }
 `;
 
 export const Info = styled.span`
-    padding-right: 0.1rem;
+    img {
+        width: 12px;
+        vertical-align: baseline;
+    }
 `;

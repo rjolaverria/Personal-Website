@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 
 export const Container = styled.nav`
@@ -8,7 +8,6 @@ export const Container = styled.nav`
     top: 0;
     left: 0;
     display: grid;
-    width: 60px;
     grid-template: 2fr 1fr / auto;
     height: 100%;
     z-index: 2;
@@ -88,12 +87,24 @@ export const Items = styled.div`
     padding: 1rem 0;
 `;
 
+const iconStyle = css`
+    &:hover {
+        img {
+            filter: brightness(100%);
+        }
+    }
+
+    img {
+        width: 35px;
+        height: 35px;
+        filter: brightness(50%);
+    }
+`;
+
 export const Tab = styled(RouterLink)`
-    color: ${({ active }) => (active ? '#fff' : 'var(--light-color)')};
     display: grid;
     grid-gap: 8px;
     grid-template: repeat(3, auto) / repeat(3, auto);
-    font-size: 2rem;
     text-decoration: none;
     padding: 0.75rem 0.5rem;
     border-left: 3px solid var(--secondary-color);
@@ -101,18 +112,15 @@ export const Tab = styled(RouterLink)`
     transition: border 1s;
     position: relative;
 
-    &:hover {
-        color: white;
-    }
+    ${iconStyle}
 
-    & > i,
-    & > img {
+    img {
         grid-row: 1 / -1;
         grid-column: 1/-1;
-        width: 100%;
+        filter: brightness(${({ active }) => (active ? '100%' : '50%')});
     }
 
-    & > span {
+    span {
         grid-row: 3;
         grid-column: 3;
     }
@@ -121,16 +129,14 @@ export const Tab = styled(RouterLink)`
 export const Social = styled(Items)`
     align-items: center;
     padding-bottom: 2rem;
+
     a {
-        color: var(--light-color);
         display: block;
-        font-size: 2rem;
-        text-decoration: none;
         padding: 0.75rem 0.5rem;
+
+        ${iconStyle}
     }
-    img {
-        width: 100%;
-    }
+
     @media (max-height: 567px) {
         display: none;
     }
