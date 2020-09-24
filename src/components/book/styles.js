@@ -86,7 +86,7 @@ export const Shelf = styled.div`
 
 export const ShelfTitle = styled.h2`
     font-size: 2rem;
-    margin: 0;
+    margin-top: 0;
     color: var(--secondary-color);
     grid-column: 1 /-1;
     grid-row: 1;
@@ -94,7 +94,7 @@ export const ShelfTitle = styled.h2`
 
 export const ShelfSubTitle = styled.p`
     font-size: 1.3rem;
-    font-weight: 900;
+    font-weight: 700;
     grid-column: 1/-1;
     color: #575757;
 
