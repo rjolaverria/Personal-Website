@@ -11,19 +11,19 @@ const Navigation = () => {
             <Navbar>
                 <Navbar.Items>
                     <Navbar.Tab to='/' active={current === '/' ? 'true' : ''}>
-                        <i className='fas fa-home'></i>
+                        <img src='/icons/home.svg' alt='Home' />
                     </Navbar.Tab>
                     <Navbar.Tab
                         to='about'
                         active={current === '/about' ? 'true' : ''}
                     >
-                        <i className='far fa-address-card'></i>
+                        <img src='/icons/about.svg' alt='About Me' />
                     </Navbar.Tab>
                     <Navbar.Tab
                         to='projects'
                         active={current === '/projects' ? 'true' : ''}
                     >
-                        <i className='fas fa-code-branch'></i>
+                        <img src='/icons/projects.svg' alt='Projects' />
                         <Badge pill small>
                             3
                         </Badge>
@@ -32,7 +32,7 @@ const Navigation = () => {
                         to='blog'
                         active={current === '/blog' ? 'true' : ''}
                     >
-                        <i className='fa fa-newspaper-o' aria-hidden='true'></i>
+                        <img src='/icons/blog.svg' alt='Projects' />
                     </Navbar.Tab>
                 </Navbar.Items>
                 <Navbar.Social>
@@ -41,17 +41,17 @@ const Navigation = () => {
                         target='_blank'
                         rel='noopener noreferrer'
                     >
-                        <i className='fab fa-linkedin-in'></i>
+                        <img src='/icons/linkedin.svg' alt='' />
                     </a>
                     <a
                         href='https://github.com/rjolaverria'
                         target='_blank'
                         rel='noopener noreferrer'
                     >
-                        <i className='fab fa-github-alt'></i>
+                        <img src='/icons/github.svg' alt='' />
                     </a>
                     <a href='#resume'>
-                        <i className='fas fa-file'></i>
+                        <img src='/icons/resume.svg' alt='' />
                     </a>
                 </Navbar.Social>
             </Navbar>

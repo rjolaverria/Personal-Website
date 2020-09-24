@@ -8,6 +8,7 @@ export const Container = styled.nav`
     top: 0;
     left: 0;
     display: grid;
+    width: 60px;
     grid-template: 2fr 1fr / auto;
     height: 100%;
     z-index: 2;
@@ -104,9 +105,11 @@ export const Tab = styled(RouterLink)`
         color: white;
     }
 
-    & > i {
+    & > i,
+    & > img {
         grid-row: 1 / -1;
         grid-column: 1/-1;
+        width: 100%;
     }
 
     & > span {
@@ -124,6 +127,9 @@ export const Social = styled(Items)`
         font-size: 2rem;
         text-decoration: none;
         padding: 0.75rem 0.5rem;
+    }
+    img {
+        width: 100%;
     }
     @media (max-height: 567px) {
         display: none;
