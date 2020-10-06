@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Container, Title, Book, Loading, Badge } from '../components';
+import { Container, Title, Book, Loading } from '../components';
 import { AppContext } from '../context/AppContext';
 
 const Blog = () => {
