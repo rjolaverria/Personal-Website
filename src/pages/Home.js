@@ -10,7 +10,7 @@ export const Welcome = styled.div`
 
     h1 {
         margin-bottom: 0;
-        font-size: 4rem;
+        font-size: 6rem;
         color: var(--secondary-color);
     }
 
