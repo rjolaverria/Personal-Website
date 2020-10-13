@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '../components';
+import { Button, Container } from '../components';
 import styled from 'styled-components';
 
 export const Welcome = styled.div`
@@ -21,13 +21,12 @@ export const Welcome = styled.div`
 
     h3,
     a {
-        margin: 0;
-        padding: 0 1rem;
-        color: var(--primary-color);
+        margin: 0 1rem;
     }
 
     h3 {
         font-size: 1.7rem;
+        color: var(--primary-color);
     }
 
     img {
@@ -83,6 +82,11 @@ const Home = () => {
                     <a href='#resume'>
                         <img src='/icons/resume.svg' alt='' />
                     </a>
+                </div>
+                <div>
+                    <Button to='/about' primary>
+                        About Me
+                    </Button>
                 </div>
             </Welcome>
         </Container>
