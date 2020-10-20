@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container } from '../components';
+import { Button } from '../components';
 import styled from 'styled-components';
 
 export const Welcome = styled.div`
@@ -56,7 +56,7 @@ export const Welcome = styled.div`
 
 const Home = () => {
     return (
-        <Container>
+        <section id='welcome'>
             <Welcome>
                 <h1>Rafi Joel Olaverria</h1>
                 <div>
@@ -89,7 +89,7 @@ const Home = () => {
                     </Button>
                 </div>
             </Welcome>
-        </Container>
+        </section>
     );
 };
 

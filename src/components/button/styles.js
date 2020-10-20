@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { Link as RouterLink } from 'react-router-dom';
 
 const style = css`
     display: inline-block;
@@ -37,9 +36,5 @@ export const Container = styled.button`
 `;
 
 export const Anchor = styled.a`
-    ${style}
-`;
-
-export const Link = styled(RouterLink)`
     ${style}
 `;

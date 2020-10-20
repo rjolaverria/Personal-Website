@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Container, Title, Book, Loading } from '../components';
+import { Title, Book, Loading } from '../components';
 import { AppContext } from '../context/AppContext';
 
 const Blog = () => {
@@ -7,7 +7,7 @@ const Blog = () => {
     const { currentBook, favBooks } = books;
 
     return (
-        <Container>
+        <section id='blog'>
             <Title>Blog</Title>
             <Book.Shelf>
                 <Book.ShelfTitle>
@@ -51,7 +51,7 @@ const Blog = () => {
                     <Loading />
                 )}
             </Book.Shelf>
-        </Container>
+        </section>
     );
 };
 

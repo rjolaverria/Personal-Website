@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Title } from '../components';
+import { Title } from '../components';
 
 const Projects = () => {
     return (
-        <Container>
+        <section id='projects'>
             <Title linePosition='right'>Projects</Title>
-        </Container>
+        </section>
     );
 };
 

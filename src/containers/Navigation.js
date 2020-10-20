@@ -1,26 +1,28 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import { Navbar, Footer, Badge } from '../components';
 
 const Navigation = () => {
     // Current page
-    const current = useLocation().pathname;
+    const current = '/';
 
     return (
         <>
             <Navbar>
                 <Navbar.Items>
-                    <Navbar.Tab to='/' active={current === '/' ? 'true' : ''}>
+                    <Navbar.Tab
+                        href='#welcome'
+                        active={current === '/' ? 'true' : ''}
+                    >
                         <img src='/icons/home.svg' alt='Home' />
                     </Navbar.Tab>
                     <Navbar.Tab
-                        to='about'
+                        href='#about'
                         active={current === '/about' ? 'true' : ''}
                     >
                         <img src='/icons/about.svg' alt='About Me' />
                     </Navbar.Tab>
                     <Navbar.Tab
-                        to='projects'
+                        href='#projects'
                         active={current === '/projects' ? 'true' : ''}
                     >
                         <img src='/icons/projects.svg' alt='Projects' />
@@ -29,7 +31,7 @@ const Navigation = () => {
                         </Badge>
                     </Navbar.Tab>
                     <Navbar.Tab
-                        to='blog'
+                        href='#blog'
                         active={current === '/blog' ? 'true' : ''}
                     >
                         <img src='/icons/blog.svg' alt='Projects' />

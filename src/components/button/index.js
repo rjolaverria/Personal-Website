@@ -1,16 +1,10 @@
 import React from 'react';
-import { Container, Anchor, Link } from './styles';
+import { Container, Anchor} from './styles';
 
 const Button = ({ children, to, href, ...restProps }) =>
-    to ? (
-        <Link to={to} {...restProps}>
-            {children}
-        </Link>
-    ) : href ? (
+     href || to ? (
         <Anchor
-            href={href}
-            target='_blank'
-            rel='noopener noreferrer'
+            href={href || to}
             {...restProps}
         >
             {children}
