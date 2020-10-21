@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from './containers/Navigation';
-import { Alert, Container } from './components';
+import { Alert } from './components';
 
 // Pages
 import Home from './sections/Home';
@@ -12,12 +12,10 @@ const App = () => (
     <>
         <Navigation />
         <Alert />
-        <Container>
-            <Home />
-            <About />
-            <Projects />
-            <Blog />
-        </Container>
+        <Home />
+        <About />
+        <Projects />
+        <Blog />
     </>
 );
 

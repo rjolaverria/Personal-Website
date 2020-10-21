@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Navbar, Footer, Badge } from '../components';
+import { AppContext } from '../context/AppContext';
 
 const Navigation = () => {
+    const { repos } = useContext(AppContext);
     // Current page
     const current = '/';
 
@@ -27,7 +29,7 @@ const Navigation = () => {
                     >
                         <img src='/icons/projects.svg' alt='Projects' />
                         <Badge pill small>
-                            3
+                            {repos.length}
                         </Badge>
                     </Navbar.Tab>
                     <Navbar.Tab

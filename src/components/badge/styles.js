@@ -13,5 +13,5 @@ export const Container = styled.span`
     font-size: ${({ small, large }) =>
         small ? '.65rem' : large ? '1.2rem' : '1rem'};
     font-weight: 700;
-    padding: 5px ${({ small }) => (small ? '8px' : '10px')};
+    padding: 5px ${({ small }) => (small ? '6px' : '10px')};
 `;
