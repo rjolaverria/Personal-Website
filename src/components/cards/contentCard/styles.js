@@ -15,7 +15,7 @@ export const Container = styled.div`
         primary || secondary ? '#fff' : 'var(--secondary-color)'};
     display: grid;
     grid-gap: 1em;
-    grid-template: 200px 1fr 2fr 1fr / auto auto;
+    grid-template: 200px auto auto 50px 0 / 0 auto auto 0;
     grid-template-areas:
         'img img img img'
         '... ttl ttl ...'
@@ -24,6 +24,10 @@ export const Container = styled.div`
         '... ... ... ...';
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
 
+    a {
+        text-decoration: none;
+        color: var(--primary-color);
+    }
 `;
 
 export const Image = styled.img`
@@ -35,17 +39,13 @@ export const Image = styled.img`
 
 export const Title = styled.h2`
     margin: 0;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 600;
     grid-area: ttl;
 
-    @media (max-width: 600px) {
-        font-size: 1.75rem;
-    }
 `;
 
 export const Body = styled.p`
-    width: 100%;
     margin: 0;
     font-size: 1.1rem;
     line-height: 1.2;
@@ -56,7 +56,7 @@ export const Body = styled.p`
     }
 `;
 
-export const Info = styled.small`
+export const Info = styled.div`
     font-size: 0.9rem;
     font-weight: 700;
     opacity: 0.8;
