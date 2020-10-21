@@ -7,7 +7,7 @@ const Blog = () => {
     const { currentBook, favBooks } = books;
 
     return (
-        <Container>
+        <Container id='blog'>
             <Title>Blog</Title>
             <Book.Shelf>
                 <Book.ShelfTitle>

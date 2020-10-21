@@ -1,21 +1,34 @@
 import React from 'react';
-import { Button, Container } from '../components';
+import { Button } from '../components';
 import styled from 'styled-components';
 
-export const Welcome = styled.div`
+const Container = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    background-color: lightgrey;
+    height: 100vh;
 
     h1 {
-        margin-bottom: 0;
+        margin: 0;
         font-size: 6rem;
-        color: var(--secondary-color);
+        color: white;
+    }
+
+    .section {
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .next {
+        margin-bottom: 3rem;
     }
 
     div {
-        margin-bottom: 0.7rem;
+        margin-bottom: 0.85rem;
         display: flex;
     }
 
@@ -35,16 +48,16 @@ export const Welcome = styled.div`
         height: 30px;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 1015px) {
         h1 {
-            font-size: 3rem;
+            font-size: 4rem;
         }
         h3 {
             font-size: 1.4rem;
         }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 700px) {
         h1 {
             font-size: 2.3rem;
         }
@@ -56,8 +69,8 @@ export const Welcome = styled.div`
 
 const Home = () => {
     return (
-        <Container>
-            <Welcome>
+        <Container id='welcome'>
+            <div className='section'>
                 <h1>Rafi Joel Olaverria</h1>
                 <div>
                     <h3>Front-End</h3>
@@ -83,12 +96,13 @@ const Home = () => {
                         <img src='/icons/resume.svg' alt='' />
                     </a>
                 </div>
-                <div>
-                    <Button to='/about' primary>
-                        About Me
-                    </Button>
-                </div>
-            </Welcome>
+            </div>
+
+            <div className='next'>
+                <Button to='#about' primary>
+                    About Me
+                </Button>
+            </div>
         </Container>
     );
 };

@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { Link as RouterLink } from 'react-router-dom';
 
 export const Container = styled.nav`
     color: var(--light-color);
@@ -101,7 +100,7 @@ const iconStyle = css`
     }
 `;
 
-export const Tab = styled(RouterLink)`
+export const Tab = styled.a`
     display: grid;
     grid-gap: 8px;
     grid-template: repeat(3, auto) / repeat(3, auto);
